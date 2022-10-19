@@ -11,16 +11,18 @@ const guess = () => {
       var number = parseInt(prompt(`${userName}, Guess a number between 1 to ${range}: `));
   
       if (generated == number) {
-        alert('your number was right!');
+        alert('your guess was right!');
+
         range++;
         points++;
         tries++;
-        alert(`you now have ${tries} tries`)
-  
+
         nextLevel();
+        alert(`you now have ${tries} tries`);
+  
         
       } else if (generated !== number) {
-        alert('Number is not correct, try again!')
+        alert('your guess is not correct, try again!')
         tries--
         alert(`you now have ${tries} tries`)
         
@@ -33,7 +35,7 @@ const guess = () => {
 
 const nextLevel = () => {
   if (win == true) {
-    alert(`congratulations you guessed the number correctly and you have been awarded 1 point, procede to next level`)
+    alert(`congratulations you guessed the number correctly and you have been awarded 1 point, procede to the next level`)
     alert(`you now have ${points} point`)
    }
 }
